@@ -1,0 +1,11 @@
+<% include partials/header %>
+<h2 class="pageHeader">Choose Meals For The Week</h2>
+<div>
+  <% mealsList.forEach(function(meal){ %>
+    <form class="meal">
+      <input type="checkbox" name="checkbox" value="text">
+      <label><%= meal %></label>
+    </form>
+  <% }) %>
+</div>
+<% include partials/footer %>
