@@ -1,0 +1,17 @@
+The purpose of this document is to outline the homepage in more detail and work through any snafoos I encounter when building it.
+
+- I want a nav bar with the logo which I will need to make and nothing else.
+- I want a white background.
+- I want a decending list of large text labels with checkboxes on the left.
+- I want a big red button at the bottom that says "Generate Shopping List"
+	- When the button is clicked, I will use frontend js to package up which checkboxes are ticked into a link and launch that link to be caught by the node.js/express backend route handling.
+	- The route handling will decode which checkboxes were ticked, put together the ingredients list, and launch the shopping list page with the list as an ejs variable that is accessable by the front end.
+	- The front end can just loop through the list and display each item.
+	- I could make the ejs variable I pass in be a "weeklyMeals" class with subclasses called "mealLists" that each contained one string for the name of the meal and a list of strings for the ingredients needed for that meal.
+	- I think that would be the way to go as this would let me separate the shopping list page out into sections for each meal.
+	- I could even have a toggle on the home page specifying whether to group the list by meal or just glom all the ingredients into one list.
+	- If I do this, the conglomerate list can use a hash map so that any ingrediente that is listed twice will get sorted into the same "bucket" and I can use the number of items in a bucket to specify a x2 x3 ... xn amount of any given ingredient.
+- I also want the homepage to be able to specify the ammount of any one dish so that we can say "I want 3 ceaser salads" and it generates a list with all the right ingredients.
+
+- My next step is to copy over the project for John's website into this directory and start altering it to fit the needs of this project.
+- Ooo, before that I'll make this a git repository.

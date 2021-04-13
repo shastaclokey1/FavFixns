@@ -1,0 +1,10 @@
+The purpose of this document is to describe what I would like my grocery list web application to do.
+
+- I would like to be able to select meals from a list using checkboxes, click a button, and have a list generated that includes all the ingredients I'll need for each of the meals I selected.
+- This app will be broken into two pages.
+- The home page will display labels of all our favorite meals with checkboxes next to each label and a button at the bottom that says "Generate Shopping List"
+- The shopping list page will display a sectioned list where each section specifies the dish followed by each ingredient required for that dish.
+- The app should contain a nav bar to be able to get back to the home page to generate a new list.
+- The home page could eventually have a slideshow of food as a background image... or maybe just a white background to make it functional and not distracting.
+	- Yeah, just a simple background is the way to go.
+- I can start with the app I made for John's Electrician business as a template.
