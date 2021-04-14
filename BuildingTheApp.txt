@@ -15,3 +15,13 @@ The purpose of this document is to outline the homepage in more detail and work 
 
 - My next step is to copy over the project for John's website into this directory and start altering it to fit the needs of this project.
 - Ooo, before that I'll make this a git repository.
+- I was able to get the homepage almost all the way built.
+- I defined a JSON object with a couple of our favorite meals in the back end.
+- I then used the Object.keys() function to get a list of strings of the meal names.
+- I passed that list as an ejs variable to the homepage front end.
+- I then displayed each name with a checkbox next to it.
+- My next step is to make a button that launches to the shopping list page.
+- The button will have to have an href that is defined each time a checkbox is checked.
+- The custom href will have x 0s or 1 in a querey string representing the states of the x checkboxes.
+- These states will be decoded by the shopping list route catcher backend code.
+- I'll work on this either tonight or tomorrow :) probably tomorrow because I'm going surfing tonight!
