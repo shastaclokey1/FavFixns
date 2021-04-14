@@ -3,9 +3,43 @@
 <div>
   <% mealsList.forEach(function(meal){ %>
     <form class="meal">
-      <input type="checkbox" name="checkbox" value="text">
+      <input onclick="updateBtnHref()" type="checkbox" name="checkbox" value="text">
       <label><%= meal %></label>
     </form>
   <% }) %>
 </div>
+<div>
+  <a id="generateListBtn" href="/shoppingList?selectedMeals=000000" class="btn btn-lg btn-danger">Dashboard</a>
+</div>
+
+<script>
+  function updateBtnHref() 
+  {
+    var allMealCheckboxes = document.querySelectorAll(".meal > input");
+    var generateListBtn = document.querySelector("#generateListBtn");
+    var stringForBtnHref = "/shoppingList?selectedMeals=";
+    allMealCheckboxes.forEach(function(checkbox){
+      if (checkbox.checked)
+      {
+        stringForBtnHref += "1";
+      }
+      else
+      {
+        stringForBtnHref += "0";
+      }
+    });
+    generateListBtn.href = stringForBtnHref;
+  }
+
+  function detectEnterPressed(event)
+  {
+    var generateListBtn = document.querySelector("#generateListBtn");
+    if (event.keyCode == 13)
+    {
+      updateBtnHref();
+      generateListBtn.click();
+    }
+  }
+  </script>
+
 <% include partials/footer %>

@@ -25,3 +25,7 @@ The purpose of this document is to outline the homepage in more detail and work 
 - The custom href will have x 0s or 1 in a querey string representing the states of the x checkboxes.
 - These states will be decoded by the shopping list route catcher backend code.
 - I'll work on this either tonight or tomorrow :) probably tomorrow because I'm going surfing tonight!
+- I was able to get the app fully functional!
+- It needs a logo and I need to add in the rest of our meals, but I can now select from a set of meals, click a button, and a list of all the ingredients I need to buy comes right up.
+- Maybe I'll add checkboxes to the left of each of the items displayed on the shopping list page.
+- Anyway, I think this will be a really useful app.

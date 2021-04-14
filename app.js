@@ -155,7 +155,8 @@ app.get("/", function(request, response) {
 });
 
 app.get("/shoppinglist", function(request, response) {
-    response.render("shoppingList");
+    var generatedIngredientsList = selectIngredients(commonMealsList, request.query.selectedMeals);
+    response.render("shoppingList", {ingredientsList: generatedIngredientsList});
 });
 
 app.get("*", function(request, response) {
@@ -165,3 +166,26 @@ app.get("*", function(request, response) {
 app.listen(process.env.PORT || 3000, function() {
     console.log("Server has started for FavFixns");
 });
+
+function selectIngredients(mealsList, selectedMeals) 
+{
+    var selectedMealsArray = selectedMeals.split("");
+    var allIngredients = "";
+    var mealsListKeys = Object.keys(mealsList);
+
+    mealsListKeys.forEach((key, index) => {
+        if (selectedMealsArray[index] == '1')
+        {
+            mealsList[key].forEach(function(meal){
+                allIngredients += meal['ingredient'];
+                if (meal['quantity'] > 1)
+                {
+                    allIngredients += " (x" + meal['quantity'] + ")";
+                }
+                allIngredients += ",";
+            });
+        }
+    });
+
+    return (allIngredients.split(","));
+}

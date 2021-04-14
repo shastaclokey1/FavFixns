@@ -1,3 +1,8 @@
 <% include partials/header %>
 <h1>Shopping List</h1>
+<div>
+    <% ingredientsList.forEach(function(ingredient){ %>
+        <h3><%= ingredient %></h3>
+    <% }) %>
+  </div>
 <% include partials/footer %>
