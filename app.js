@@ -20,6 +20,10 @@ var commonMealsList = {
         {
             "ingredient" : "Rosarita Beans",
             "quantity" : 1
+        },
+        {
+            "ingredient" : "Shredded Cheese",
+            "quantity" : 1
         }
     ],
     "Turkey Taco Boats" : [
@@ -41,7 +45,7 @@ var commonMealsList = {
         },
         {
             "ingredient" : "Jalapenos",
-            "quantity" : 3
+            "quantity" : 2
         },
         {
             "ingredient" : "Mushrooms",
@@ -80,12 +84,20 @@ var commonMealsList = {
         {
             "ingredient" : "Cucumber",
             "quantity" : 1
+        },
+        {
+            "ingredient" : "Lemon",
+            "quantity" : 1
+        },
+        {
+            "ingredient" : "Bell Pepper",
+            "quantity" : 2
         }
     ],
     "Basic Vinegarette Salad" : [
         {
             "ingredient" : "Red Bell Pepper",
-            "quantity" : 1
+            "quantity" : 2
         },
         {
             "ingredient" : "Romaine Letuce",
@@ -93,10 +105,6 @@ var commonMealsList = {
         },
         {
             "ingredient" : "Cucumber",
-            "quantity" : 1
-        },
-        {
-            "ingredient" : "Croutons",
             "quantity" : 1
         },
         {
@@ -132,6 +140,10 @@ var commonMealsList = {
         {
             "ingredient" : "Panda Express Sweet And Tangy Bejing Sauce",
             "quantity" : 1
+        },
+        {
+            "ingredient" : "Onion",
+            "quantity" : 1
         }
     ],
     "Hot Wings" : [
@@ -141,6 +153,80 @@ var commonMealsList = {
         },
         {
             "ingredient" : "Franks Red Hot",
+            "quantity" : 1
+        }
+    ],
+    "Lemon Chicken" : [
+        {
+            "ingredient" : "Chicken Thighs",
+            "quantity" : 1
+        },
+        {
+            "ingredient" : "Pearl Onions",
+            "quantity" : 1
+        },
+        {
+            "ingredient" : "Garlic",
+            "quantity" : 1
+        },
+        {
+            "ingredient" : "Rosemary",
+            "quantity" : 1
+        },
+        {
+            "ingredient" : "Lemon",
+            "quantity" : 2
+        }
+    ],
+    "Pork Loin" : [
+        {
+            "ingredient" : "Pork Loin",
+            "quantity" : 1
+        },
+        {
+            "ingredient" : "Onion",
+            "quantity" : 1
+        },
+        {
+            "ingredient" : "Garlic",
+            "quantity" : 1
+        }
+    ],
+    "Chilie Verde" : [
+        {
+            "ingredient" : "Pork Shoulder (4lbs)",
+            "quantity" : 1
+        },
+        {
+            "ingredient" : "Tomatillos",
+            "quantity" : 4
+        },
+        {
+            "ingredient" : "Poblamo Peppers",
+            "quantity" : 2
+        },
+        {
+            "ingredient" : "Anaheim or cubanelle peppers",
+            "quantity" : 2
+        },
+        {
+            "ingredient" : "Serrano or jalapeno",
+            "quantity" : 2
+        },
+        {
+            "ingredient" : "Onion",
+            "quantity" : 1
+        },
+        {
+            "ingredient" : "Garlic",
+            "quantity" : 1
+        },
+        {
+            "ingredient" : "Selantro",
+            "quantity" : 2
+        },
+        {
+            "ingredient" : "Tortillas",
             "quantity" : 1
         }
     ],
