@@ -2,11 +2,39 @@
     height: 100px;
 }
 
-.meal {
-    padding: 10px;
-}
-
 .navbar {
     height: 125px;
     background-color: white;
+}
+
+form {
+    padding: 10px;
+}
+
+label {
+    font-size:  50px;
+}
+
+input {
+    padding: 10px;
+}
+
+h1 {
+    font-size: 75px;
+}
+
+.itemInCart {
+    text-decoration: line-through;
+}
+
+.hideElement {
+    visibility: hidden;
+}
+
+.squishElement {
+    height: 0;
+}
+
+.removeItemButton {
+    color: red;
 }

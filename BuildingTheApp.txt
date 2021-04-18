@@ -32,3 +32,19 @@ The purpose of this document is to outline the homepage in more detail and work 
 - We added in all our regular recipes :)
 - I definitely want to have the ability to add and remove ingredients to/from the shopping list.
 - I want to get this hosted on heroku so I can use it :)
+- I added the app to heroku and figured out how to make the domain favfixns.herokuapp.com Woo!!
+- My next step is to add checkboxes to the shopping list screen so we can use it while shopping.
+	- Scratch that! The checkboxes look super lame.
+	- I am going to try to put a strike-through over the text if I click the label.
+	- That should look better.
+	- I did it with jQuerey and it was super easy.
+	- I just used the $(this).toggleClass() function inside a $("label").click() listener.
+- My next step is to add buttons next to the labels to remove the element.
+	- Woohoo! I couldn't use buttons or link tags because they kept rerouting me back to the page and loading all the list items again, so I used another label and set an click listener with jquery that removes the parent element
+	- Done and done.
+- My next step is to add an input at the botton that adds in new ingredients.
+	- I wasn't able to do this yet, but I'll add it in soon :)
+- I was able to fix the problem where one extra empty ingredient was being displayed on the shopping list because of an extra comma.
+	- Just returned the substring minus the last character.
+- Now I'll upload and see how it looks! :)
+	

@@ -262,7 +262,7 @@ function selectIngredients(mealsList, selectedMeals)
     mealsListKeys.forEach((key, index) => {
         if (selectedMealsArray[index] == '1')
         {
-            mealsList[key].forEach(function(meal){
+            mealsList[key].forEach(function(meal, index){
                 allIngredients += meal['ingredient'];
                 if (meal['quantity'] > 1)
                 {
@@ -273,5 +273,8 @@ function selectIngredients(mealsList, selectedMeals)
         }
     });
 
-    return (allIngredients.split(","));
+    var allIngredientsArray = allIngredients.split(",");
+
+
+    return (allIngredients.substring(0, allIngredients.length - 1).split(","));
 }

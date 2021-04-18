@@ -1,8 +1,40 @@
 <% include partials/header %>
 <h1>Shopping List</h1>
-<div>
-    <% ingredientsList.forEach(function(ingredient){ %>
-        <h3><%= ingredient %></h3>
-    <% }) %>
-  </div>
+
+<div id="ingredientsList">
+  <% ingredientsList.forEach(function(ingredient, index){ %>
+    <form>
+      <label class="ingredient"><%= ingredient %></label>
+      <label class="removeItemButton">(remove)</label>
+    </form>
+  <% }) %>
+</div>
+
+
+<!-- <form>
+  <label>
+    Add ingredient
+    <input id="addIngredientInput" type="text">
+  </label>
+  <label id="addIngredientButton">(add)</label>
+</form> -->
+
+<script>
+  $(".ingredient").click(function () {
+    $(this).toggleClass("itemInCart");
+  });
+
+  $(".removeItemButton").click(function() {
+    $(this).parent("form").remove();
+  });
+
+  $("#addIngredientButton").click(function() {
+    var ingredientText = $("#addIngredientInput").text();
+    var ingredientsList = $("#ingredientsList");
+    var newHTML = "<form><label class=\"ingredient\">" + ingredientText + "</label><label class=\"removeItemButton\">(remove)</label></form>";
+    ingredientsList.html(ingredientsList.html() + newHTML);
+    
+    
+  });
+</script>
 <% include partials/footer %>
