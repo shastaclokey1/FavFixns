@@ -11,7 +11,7 @@
   <% }) %>
 </div>
 <div>
-  <a id="generateListBtn" href="/shoppingList?selectedMeals=000000000" class="btn btn-lg btn-danger">Shopping List</a>
+  <a id="generateListBtn" href="/shoppingList?selectedMeals=" class="btn btn-lg btn-danger">Shopping List</a>
 </div>
 
 <script>
@@ -32,6 +32,8 @@
     });
     generateListBtn.href = stringForBtnHref;
   }
+
+  updateBtnHref();
   </script>
 
 <% include partials/footer %>
