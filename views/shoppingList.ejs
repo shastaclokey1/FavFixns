@@ -11,30 +11,28 @@
 </div>
 
 
-<!-- <form>
+<form>
   <label>
     Add ingredient
     <input id="addIngredientInput" type="text">
   </label>
   <label id="addIngredientButton">(add)</label>
-</form> -->
+</form>
 
 <script>
-  $(".ingredient").click(function () {
+  $(document).on('click', '.ingredient', function () {
     $(this).toggleClass("itemInCart");
   });
 
-  $(".removeItemButton").click(function() {
+  $(document).on('click', '.removeItemButton', function () {
     $(this).parent("form").remove();
   });
 
-  $("#addIngredientButton").click(function() {
-    var ingredientText = $("#addIngredientInput").text();
+  $(document).on('click', '#addIngredientButton', function() {
+    var ingredientText = $("#addIngredientInput").val();
     var ingredientsList = $("#ingredientsList");
-    var newHTML = "<form><label class=\"ingredient\">" + ingredientText + "</label><label class=\"removeItemButton\">(remove)</label></form>";
-    ingredientsList.html(ingredientsList.html() + newHTML);
-    
-    
+    var newHTML = "<form><label class=\"ingredient\">" + ingredientText + "</label><label class=\"removeItemButton\"> (remove)</label></form>";
+    ingredientsList.html(ingredientsList.html() + newHTML); 
   });
 </script>
 <% include partials/footer %>

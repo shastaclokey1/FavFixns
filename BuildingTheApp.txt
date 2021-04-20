@@ -47,4 +47,10 @@ The purpose of this document is to outline the homepage in more detail and work 
 - I was able to fix the problem where one extra empty ingredient was being displayed on the shopping list because of an extra comma.
 	- Just returned the substring minus the last character.
 - Now I'll upload and see how it looks! :)
+- I am now going to tackle adding in the input at the bottom that adds in new ingredients.
+	- I got it!!
+	- I needed to use the .val() jquery method to get the input text to put in the new label item.
+	- I also needed to switch to switch to using event delegation instead of directly binding events to tags that could change due to dynamic dom manipuulation.
+	- This makes complete sense as the dom is changing so the direct bindings I set up would get wiped out.
+	- The document doesn't ever get wiped out, so setting up events with $(document).on('event','selector',callback_function) will always be the way to go
 	
