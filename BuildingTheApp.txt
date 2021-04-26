@@ -53,4 +53,14 @@ The purpose of this document is to outline the homepage in more detail and work 
 	- I also needed to switch to switch to using event delegation instead of directly binding events to tags that could change due to dynamic dom manipuulation.
 	- This makes complete sense as the dom is changing so the direct bindings I set up would get wiped out.
 	- The document doesn't ever get wiped out, so setting up events with $(document).on('event','selector',callback_function) will always be the way to go
-	
+- My next task is to add in a hash function such that I can combine duplicate ingredients, only list them once on the shopping list page, and put a multiple next to them for how many to buy.
+	- I will need to add each item to the has table how ever many times the "quantity" field dictates from the json list of meals.
+	- I will then need to pass the hash table to the front end.
+	- I think I can make my hash table with a list of objects where the first field of the object is the text field and the second field of the object is the quantity field.
+	- Actually, I am going to do a quick google search for js hash maps.
+	- Looks like my best bet will be to have the words be the keys and the quantities be the values.
+	- Let's do it!
+	- I did it!
+	- I now have an app that consolodates all the ingredients down to hash buckets and counts the number of ingredients in each bucket there are in order to display that many on the shopping list page :)
+	- Woo!
+

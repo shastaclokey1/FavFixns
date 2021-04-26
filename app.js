@@ -241,8 +241,9 @@ app.get("/", function(request, response) {
 });
 
 app.get("/shoppinglist", function(request, response) {
-    var generatedIngredientsList = selectIngredients(commonMealsList, request.query.selectedMeals);
-    response.render("shoppingList", {ingredientsList: generatedIngredientsList});
+    var generatedIngredientsHashMap = selectIngredients(commonMealsList, request.query.selectedMeals);
+    var generatedIngredientsKeys = Object.keys(generatedIngredientsHashMap);
+    response.render("shoppingList", {ingredientsHashMap: generatedIngredientsHashMap, ingredientsKeys: generatedIngredientsKeys});
 });
 
 app.get("*", function(request, response) {
@@ -256,25 +257,27 @@ app.listen(process.env.PORT || 3000, function() {
 function selectIngredients(mealsList, selectedMeals) 
 {
     var selectedMealsArray = selectedMeals.split("");
-    var allIngredients = "";
+    var allIngredients = {};
     var mealsListKeys = Object.keys(mealsList);
 
     mealsListKeys.forEach((key, index) => {
         if (selectedMealsArray[index] == '1')
         {
             mealsList[key].forEach(function(meal, index){
-                allIngredients += meal['ingredient'];
-                if (meal['quantity'] > 1)
+                for (var i = 0; i < meal['quantity']; i++)
                 {
-                    allIngredients += " (x" + meal['quantity'] + ")";
+                    if (allIngredients[meal['ingredient']] == null)
+                    {
+                        allIngredients[meal['ingredient']] = 1;
+                    } 
+                    else 
+                    {
+                        allIngredients[meal['ingredient']]++;
+                    }
                 }
-                allIngredients += ",";
             });
         }
     });
 
-    var allIngredientsArray = allIngredients.split(",");
-
-
-    return (allIngredients.substring(0, allIngredients.length - 1).split(","));
+    return allIngredients;
 }
