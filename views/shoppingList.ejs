@@ -30,6 +30,7 @@
 
   $(document).on('click', '#addIngredientButton', function() {
     var ingredientText = $("#addIngredientInput").val();
+    $("#addIngredientInput").val("")
     var ingredientsList = $("#ingredientsList");
     var newHTML = "<form><label class=\"ingredient\">" + ingredientText + "</label><label class=\"removeItemButton\"> (remove)</label></form>";
     ingredientsList.html(ingredientsList.html() + newHTML); 

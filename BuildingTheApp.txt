@@ -63,4 +63,16 @@ The purpose of this document is to outline the homepage in more detail and work 
 	- I did it!
 	- I now have an app that consolodates all the ingredients down to hash buckets and counts the number of ingredients in each bucket there are in order to display that many on the shopping list page :)
 	- Woo!
-
+- I need to clear out the "add ingredient" input text field whenever I add an ingredient so it is ready to add another item.
+	- Did it!
+	- All I had to do was pass the empty string ("") to the $(selector).val("") jquery function.
+- I need to make a logo for the website.
+	- I made the logo and I really like it.
+	- I have the same red as lonevid with a pie, a dinner plate, and a soup bowl clip art under the two f's and the n.
+	- I really like Free Logo Maker.
+	- https://logomakr.com/4bThAe#
+- I think the app is "done" for now.
+- I want to start researching how to use mongoDB to save data.
+- I will do this in another document.
+- I will also research authentication.
+- Maybe that will be another research document.
